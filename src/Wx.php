@@ -8,9 +8,6 @@
 
 namespace xuezhitech\wx;
 
-use think\facade\Cache;
-
-
 class Wx
 {
     /**
