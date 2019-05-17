@@ -8,7 +8,7 @@
 
 namespace xuezhitech\wx;
 
-class Wx
+class Weixin
 {
     /**
      * 获得Code

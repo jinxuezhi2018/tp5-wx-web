@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "xuezhitech\\tp-wx-web\\": "src/"
+            "xuezhitech\\wx\\": "src/"
         }
     }
 }
