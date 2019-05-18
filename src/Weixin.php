@@ -8,6 +8,8 @@
 
 namespace xuezhitech\wx;
 
+use think\facade\Config;
+
 class Weixin
 {
     /**
