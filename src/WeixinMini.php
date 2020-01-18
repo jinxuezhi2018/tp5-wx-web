@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: john
- * Date: 2018/12/28
- * Time: 14:01
- */
 
 namespace xuezhitech\wx;
 
