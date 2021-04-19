@@ -6,7 +6,7 @@ namespace xuezhitech\wx;
 class WeixinWeb
 {
     protected $config = [
-        'appid' => '',
+        'app_id' => '',
         'secret' => '',
         'grant_type' => 'authorization_code'
     ];
@@ -19,7 +19,7 @@ class WeixinWeb
      * 获得Code
      */
     public function getCode($redirect_uri,$scope='snsapi_base'){
-        $app_id = $this->config['appid'];
+        $app_id = $this->config['app_id'];
         $state = md5(uniqid());
         $redirect_uri = urlencode($redirect_uri);
         $url = "https://open.weixin.qq.com/connect/oauth2/authorize?
@@ -33,13 +33,14 @@ class WeixinWeb
      * 获得AccessToken
      */
     public function getAccessToken($code){
-        $app_id = $this->config['appid'];
+        $app_id = $this->config['app_id'];
         $secret = $this->config['secret'];
+        $grant_type = $this->config['grant_type'];
         $url = "https://api.weixin.qq.com/sns/oauth2/access_token?
                 appid={$app_id}&
                 secret={$secret}&
                 code={$code}&
-                grant_type=authorization_code";
+                grant_type={$grant_type}";
         return $this->getCurlInfo($url);
     }
 
